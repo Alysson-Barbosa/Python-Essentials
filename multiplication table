@@ -1,0 +1,3 @@
+tab = int(input('Enter a number for the table: '))
+for c in range(1, 11):
+    print('{} x {} = {}'.format(tab, c, tab*c))

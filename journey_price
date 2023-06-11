@@ -1,0 +1,10 @@
+dist = int(input('What is the distance of your journey in km? '))
+preco = 0
+if dist <= 200:
+    preco = 0.50 * dist
+    print('The price of your trip is R$ {}'.format(preco))
+else:
+    preco = 0.45 * dist
+preco = dist * 0.50 if dist <= 200 else dist * 0.45
+print('The price of your trip is R$ {}'.format(preco))
+

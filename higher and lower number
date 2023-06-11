@@ -1,0 +1,22 @@
+a = int(input('Enter a value: '))
+b = int(input('Enter one more value: '))
+c = int(input('Enter the last value: '))
+
+#Checking who is lower
+
+menor = a
+if b < a and b < c:
+    menor = b
+if c < a and c < b:
+    menor = c
+
+#Checking who is higher
+
+maior = a
+if b > a and b > c:
+    maior = b
+if c > a and c > b:
+    maior = c
+
+print('The lowest number entered was {}'.format(menor))
+print('The highest number entered was {}'.format(maior))

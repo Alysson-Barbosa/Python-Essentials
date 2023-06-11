@@ -1,0 +1,20 @@
+from random import randint
+
+computador = randint(0, 10)
+print('I'm your computer... I just thought of a number between 0 and 10...')
+print('Can you guess which one it was?')
+
+acertou = False
+palpites = 0
+
+while not acertou:
+    jogador = int(input('What's your guess? '))
+    palpites += 1
+    if jogador == computador:
+        acertou = True
+    else:
+        if jogador < computador:
+            print('More... try one more time!')
+        elif jogador > computador:
+            print('Less... Try one more time!')
+print('You got it right! And it took {} tries.'.format(palpites))

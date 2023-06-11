@@ -1,0 +1,21 @@
+'''
+Write a program that displays the table of several numbers, one at a time, for each value entered by the user.
+The program will stop when the number requested by the user is negative.
+
+'''
+
+resp = 's'
+mult = 0
+
+
+while resp in 'Ss':
+    n = int(input('Type a number: '))
+    cont = 1
+    while cont < 11:
+        mult = n * cont
+        print(f'{n} X {cont} = {mult}')
+        cont += 1
+    resp = str(input('Wish to continue? [S/N]: ')).upper()
+    if resp in 'Nn':
+        print('Thanks!!')
+        break

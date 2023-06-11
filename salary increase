@@ -1,0 +1,14 @@
+'''Write a program that asks for an employee's salary and calculates the amount of his raise.
+
+For salaries above R$ 1,250, a 10% increase is calculated
+For lower or equal wages, the increase is 15%'''
+
+nsal = 0
+sal = float(input('Enter your salary: '))
+if sal > 1250:
+    nsal = sal * 0.10 + sal
+    print('Your new salary is {}'.format(nsal))
+
+else:
+    nsal = sal * 0.15 + sal
+    print('Your new salary is {}'.format(nsal))

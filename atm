@@ -1,0 +1,25 @@
+'''
+Create a program that simulates the operation of an ATM. At the beginning, ask the user what the
+VALUE TO BE WITHDRAWN (integer number) and the program will inform how many bills of each value will be delivered.
+
+NOTE: Consider that the cashier has bills of: 50, 20, 10 and 1
+'''
+
+print('ATM')
+print('Available notes: 50, 20, 10, 1')
+
+saque = int(input('What amount do you want to withdraw?: '))
+valor_saque = saque
+
+notas_50 = saque // 50
+saque %= 50
+
+notas_20 = saque // 20
+saque %= 20
+
+notas_10 = saque // 10
+saque %= 10
+
+notas_1 = saque
+
+print(f'To withdraw the value {valor_saque} you need {notes_50} 50 notes, {notes_20} 20 notes, {notes_10} dd 10 notes and {notes_1} 1' notes)

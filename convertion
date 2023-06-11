@@ -1,0 +1,25 @@
+'''Write a program that reads an integer
+any and ask the user to choose which one will be
+THE CONVERSION BRAZE:
+
+- 1 for binary;
+- 2 for octal;
+- 3 for hex'''
+
+num = int(input('Enter an integer: '))
+print('''The conversion options are: 
+
+[1] For BINARY
+[2] For OCTAL
+[3] For HEXADECIMAL \n''')
+
+opcao = int(input('Your option is?: '))
+
+if opcao == 1:
+    print('\n{} converted to binary is equal to {}'.format(num, bin(num)[2:]))
+elif opcao == 2:
+    print('\n{} converted to octal is equal to {}'.format(num, oct(num)[2:]))
+elif opcao == 3:
+    print('\n{} converted to hexadecimal is equal to {}'.format(num, hex(num)[2:]))
+else:
+    print('\nInvalid option! Try again')

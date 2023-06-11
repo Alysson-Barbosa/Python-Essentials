@@ -1,0 +1,8 @@
+'''Write a program that reads a person's gender but only accepts the values ​​'M' or 'F'. If I'm wrong,
+by typing again until you have a correct value.'''
+
+sexo = str(input('Type your gender [M/F]: ')).strip().upper()[0]
+
+while sexo not in 'MmFf':
+    sexo = str(input('Invalid data. Please inform your gender [F/M]: '))
+print('Gender {} successfully registered'.format(sexo))

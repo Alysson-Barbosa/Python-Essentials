@@ -1,0 +1,20 @@
+Write a program to approve a loan
+banking to buy a house. The program will:
+- ask the value of the house;
+- the salary of the buyer and;
+- in how many years will he pay
+
+Calculate the amount of the monthly installment knowing that it
+CANNOT EXCEED 30% of the salary or else the loan
+will be denied'''
+
+casa = float(input('Home value: '))
+salario = float(input('Buyer's salary: '))
+anos = int(input('How many years of financing?: '))
+prestacao = casa / (anos*12)
+minimo = salario * 30 / 100 # 30%
+print('o pay off a house worth {:.2f} in {} years, the installment will be {:.2f}'.format(casa, anos, prestacao))
+if prestacao <= minimo:
+    print('APPROVED loan')
+else:
+    print('loan DENIED')

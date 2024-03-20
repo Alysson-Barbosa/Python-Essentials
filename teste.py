@@ -4,7 +4,7 @@ from twilio.rest import Client
 # Your Account SID from twilio.com/console
 account_sid = "AC51972a5b9be8b1de294be2cd1320f890"
 # Your Auth Token from twilio.com/console
-auth_token = "3dfc061ff411f0e81fa3910548312e03"
+auth_token = "insert Twilio token here"
 client = Client(account_sid, auth_token)
 
 
@@ -25,8 +25,8 @@ for mes in lista_meses:
         vendas = tabela_vendas.loc[tabela_vendas['Vendas'] > 55000, 'Vendas'].values[0]
         print(f'No mes {mes} alguém bateu a meta! Vendedor: {vendedor}, Vendas: {vendas}')
         message=client.messages.create(
-                to="+610451044332",
-                from_="+12568297369",
+                to="your number",
+                from_="Twuilio's temporary number for test",
                 body=f'No mês {mes} alguém bateu a meta. Vendedor: {vendedor}, Vendas: {vendas}')
         print(message.sid)
 
